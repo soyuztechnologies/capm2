@@ -10,6 +10,7 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.84.1",
     "sqlite": "^3.0.6",
     "sqlite3": "5.0.0"
   },
@@ -23,5 +24,8 @@
         "model": "*"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/managestudents"
+  ]
 }

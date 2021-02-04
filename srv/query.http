@@ -1,19 +1,19 @@
-GET http://localhost:4005/first/Courses
+GET http://localhost:4005/catalog/Courses
 
 ###
 
-POST http://localhost:4005/first/Courses
+POST http://localhost:4005/catalog/Courses
 Content-Type: application/json
 
 {
     "course_name": "Analytics Cloud",
-    "method": "Online",
+    "method": "Online", 
     "start_date": "2021-03-10",
     "end_date": "2021-06-30"
 }
 ###
 
-POST http://localhost:4005/first/Demos
+POST http://localhost:4005/catalog/Demos
 Content-Type: application/json
 
 {

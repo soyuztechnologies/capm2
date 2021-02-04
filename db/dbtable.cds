@@ -9,10 +9,10 @@ entity Students{
     date_sign_up : Date;
     courses: Association to Courses;
 }
-
+ 
 entity Courses{
     key ID : Integer;
-    course_name : String(20);
+    course_name : String(70);
     method : String(20);
     start_date : Date;
     end_date : Date;
