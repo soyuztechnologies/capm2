@@ -4,7 +4,14 @@ using from './CatalogService';
 annotate CatalogService.Students with @(
 
     UI:{
-        Identification:[{Value: email}],
+        Identification:[
+            {Value : email,Label : '{i18n>id}'},
+            {Value : first_name,Label : '{i18n>firstname}'},
+            {Value : last_name,Label : '{i18n>lastname}'}
+        ],
+        Facets  : [
+            {Label : 'Details', $Type : 'UI.ReferenceFacet', ID: 'first_name', Target: '@UI.Identification'}
+        ],
         SelectionFields: [email],
         LineItem: [
             {Value : email},
