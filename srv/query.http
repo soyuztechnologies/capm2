@@ -1,0 +1,23 @@
+GET http://localhost:4005/first/Courses
+
+###
+
+POST http://localhost:4005/first/Courses
+Content-Type: application/json
+
+{
+    "course_name": "Analytics Cloud",
+    "method": "Online",
+    "start_date": "2021-03-10",
+    "end_date": "2021-06-30"
+}
+###
+
+POST http://localhost:4005/first/Demos
+Content-Type: application/json
+
+{
+    "course_ID": 3,
+    "no_of_seats": 12,
+    "booked_seats": 12
+}
