@@ -16,7 +16,7 @@ entity Courses{
     method : String(20);
     start_date : Date;
     end_date : Date;
-    students: Association to many Students on students.courses = $self;
+    students: Association to one Students on students.courses = $self;
 }
 
 entity Demos : cuid, managed{

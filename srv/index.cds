@@ -10,7 +10,17 @@ annotate CatalogService.Students with @(
             {Value : last_name,Label : '{i18n>lastname}'}
         ],
         Facets  : [
-            {Label : 'Details', $Type : 'UI.ReferenceFacet', ID: 'first_name', Target: '@UI.Identification'}
+            {
+                Label : 'Details', 
+                $Type : 'UI.ReferenceFacet', 
+                ID: 'first_name', 
+                Target: '@UI.Identification'
+            },
+            {
+                $Type: 'UI.ReferenceFacet',
+                Label: 'Course Details',
+                Target: 'courses/@UI.FieldGroup#CourseDetails'
+            }
         ],
         SelectionFields: [email],
         LineItem: [
@@ -20,8 +30,8 @@ annotate CatalogService.Students with @(
             {Value : date_sign_up}
         ],
         HeaderInfo:{
-            TypeName: '{i18n>Course}',
-            TypeNamePlural: '{i18n>Courses}',
+            TypeName: 'Student',
+            TypeNamePlural: 'Students',
             Title: {Value : first_name},
             Description : {Value:first_name}
         }
@@ -37,3 +47,29 @@ annotate CatalogService.Students with {
     last_name @title:'{i18n>lastname}';
     date_sign_up @title:'{i18n>signup}';
 }
+
+annotate CatalogService.Courses with @(
+UI:{
+        FieldGroup#CourseDetails: {
+
+            Data:[
+                {
+                    Label: 'Course Name',
+                    Value: course_name
+                },
+                 {
+                    Label: 'Method',
+                    Value: method
+                },
+                {
+                    Label: 'Start Date',
+                    Value: start_date
+                },
+                {
+                    Label: 'End Date',
+                    Value: end_date
+                }
+            ]
+        }
+
+});
